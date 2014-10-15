@@ -1,0 +1,38 @@
+{
+  "name": "abe-node-express",
+  "version": "0.1.0",
+  "description": "API By Example helper for testing Express API Routes",
+  "main": "src/abe-express.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/apibyexample/abe-node-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apibyexample/abe-node-express/issues"
+  },
+  "homepage": "https://github.com/apibyexample/abe-node-express",
+  "keywords": [
+    "abe",
+    "json",
+    "node",
+    "express",
+    "supertest",
+    "routes",
+    "testing"
+  ],
+  "author": [
+    "Nick White <nickswhite89@gmail.com>",
+    "API By Example <apibyexample@gmail.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-jscs": "~0.7.1",
+    "load-grunt-tasks": "~0.6.0"
+  }
+}
