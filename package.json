@@ -1,5 +1,5 @@
 {
-  "name": "abe-node-express",
+  "name": "abe-express",
   "version": "0.1.0",
   "description": "API By Example helper for testing Express API Routes.",
   "main": "src/abe-express.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/apibyexample/abe-node-express.git"
+    "url": "git://github.com/apibyexample/abe-express.git"
   },
   "bugs": {
-    "url": "https://github.com/apibyexample/abe-node-express/issues"
+    "url": "https://github.com/apibyexample/abe-express/issues"
   },
-  "homepage": "https://github.com/apibyexample/abe-node-express",
+  "homepage": "https://github.com/apibyexample/abe-express",
   "keywords": [
     "abe",
     "json",

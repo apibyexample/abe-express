@@ -1,8 +1,8 @@
-[![Build Status](http://img.shields.io/travis/apibyexample/abe-node-express/master.svg)](https://travis-ci.org/apibyexample/abe-node-express)
-[![Dependency Status](https://david-dm.org/apibyexample/abe-node-express/dev-status.svg)](https://david-dm.org/apibyexample/abe-node-express#info=devDependencies)
-[![devDependency Status](https://david-dm.org/apibyexample/abe-node-express/status.svg)](https://david-dm.org/apibyexample/abe-node-express#info=dependencies)
-[![Monthly downloads](http://img.shields.io/npm/dm/abe-node-express.svg)](https://www.npmjs.org/package/abe-node-express)
-[![License](http://img.shields.io/npm/l/abe-node-express.svg)](https://www.npmjs.org/package/abe-node-express)
+[![Build Status](http://img.shields.io/travis/apibyexample/abe-express/master.svg)](https://travis-ci.org/apibyexample/abe-express)
+[![Dependency Status](https://david-dm.org/apibyexample/abe-express/dev-status.svg)](https://david-dm.org/apibyexample/abe-express#info=devDependencies)
+[![devDependency Status](https://david-dm.org/apibyexample/abe-express/status.svg)](https://david-dm.org/apibyexample/abe-express#info=dependencies)
+[![Monthly downloads](http://img.shields.io/npm/dm/abe-express.svg)](https://www.npmjs.org/package/abe-express)
+[![License](http://img.shields.io/npm/l/abe-express.svg)](https://www.npmjs.org/package/abe-express)
 
 API By Example helper for Express
 =================================
@@ -13,14 +13,14 @@ the testing of API routes to check that the responses match those expected creat
 
 ## Installing
 
-``npm install abe-node-express --save-dev``
+``npm install abe-express --save-dev``
 
 ## Usage
 
-In order to use ``abe-node-expresss`` you will use this within your current testing setup
+In order to use ``abe-expresss`` you will use this within your current testing setup
 
 ```js
-var abeExpress = require('abe-node-express');
+var abeExpress = require('abe-express');
 abeExpress(app, mock, example, done);
 ```
 
