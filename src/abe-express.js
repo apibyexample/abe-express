@@ -1,16 +1,9 @@
 var request = require('supertest'),
     expect = require('expect.js'),
-    lodash = require('lodash-node'),
     expressMockCheck = function (app, mock, example, done) {
         var exampleMock = mock.examples[example],
             method = mock.method.toLowerCase(),
             mockBody = exampleMock.request.body;
-
-        lodash.forEach(mockBody, function (value, key) {
-            if (lodash.isPlainObject(value)) {
-                mockBody[key] = JSON.stringify(value);
-            }
-        });
 
         request(app)
             [method](exampleMock.request.url)
