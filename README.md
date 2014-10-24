@@ -17,11 +17,17 @@ the testing of API routes to check that the responses match those expected creat
 
 ## Usage
 
-In order to use ``abe-expresss`` you will use this within your current testing setup
+In order to use ``abe-express`` you will use this within your current testing setup
 
 ```js
 var abeExpress = require('abe-express');
-abeExpress(app, mock, example, done);
+abeExpress.full(app, mock, example, done);
+```
+
+```abeExpress```  also provides a header test for you to just test the response headers
+
+```js
+abeExpress.header(app, mock, example, done);
 ```
 
 ### App
@@ -34,7 +40,7 @@ This will be the full ``ABE-Spec`` mock in which you are wanting to test against
 
 ### Example
 
-This is the ``key`` which the ``examples`` object of your mock.
+This is the ``key`` within the ``examples`` object of your mock.
 
 ### Done
 
