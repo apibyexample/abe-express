@@ -33,8 +33,7 @@ var request = require('supertest'),
                 [method](exampleMock.request.url)
                 .send(mockBody)
                 .end(function (err, res) {
-                    var body = res.text,
-                        type = exampleMock.response.headers['Content-Type'];
+                    var type = exampleMock.response.headers['Content-Type'];
 
                     expect(res.statusCode).to.be(exampleMock.response.status);
                     expect(res.headers['content-type']).to.contain(type);
