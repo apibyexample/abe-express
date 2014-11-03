@@ -1,6 +1,6 @@
 [![Build Status](http://img.shields.io/travis/apibyexample/abe-express/master.svg)](https://travis-ci.org/apibyexample/abe-express)
-[![Dependency Status](https://david-dm.org/apibyexample/abe-express/dev-status.svg)](https://david-dm.org/apibyexample/abe-express#info=devDependencies)
-[![devDependency Status](https://david-dm.org/apibyexample/abe-express/status.svg)](https://david-dm.org/apibyexample/abe-express#info=dependencies)
+[![Dependency Status](https://david-dm.org/apibyexample/abe-express/status.svg)](https://david-dm.org/apibyexample/abe-express#info=dependencies)
+[![devDependency Status](https://david-dm.org/apibyexample/abe-express/dev-status.svg)](https://david-dm.org/apibyexample/abe-express#info=devDependencies)
 [![Monthly downloads](http://img.shields.io/npm/dm/abe-express.svg)](https://www.npmjs.org/package/abe-express)
 [![License](http://img.shields.io/npm/l/abe-express.svg)](https://www.npmjs.org/package/abe-express)
 
