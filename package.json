@@ -2,7 +2,7 @@
   "name": "abe-express",
   "version": "0.1.0",
   "description": "API By Example helper for testing Express API Routes.",
-  "main": "src/abe-express.js",
+  "main": "app.js",
   "scripts": {
     "test": "grunt test"
   },
