@@ -37,6 +37,7 @@
     "grunt-cli": "~0.1.13",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-jscs": "~0.8.1",
+    "grunt-mocha-test": "~0.12.2",
     "load-grunt-tasks": "~1.0.0"
   },
   "peerDependencies": {
