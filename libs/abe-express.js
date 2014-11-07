@@ -3,43 +3,26 @@ var request = require('supertest'),
     expressMockCheck = {
         full: function (app, mock, example, done) {
             var exampleMock = mock.examples[example],
-                method = mock.method.toLowerCase(),
-                mockBody = exampleMock.request.body;
+                testHeaders = require('./headers.js')(exampleMock),
+                testBody = require('./body.js')(exampleMock, done);
 
             request(app)
-                [method](exampleMock.request.url)
+                [mock.method.toLowerCase()](exampleMock.request.url)
                 .send(mockBody)
                 .end(function (err, res) {
-                    var body = res.text,
-                        type = exampleMock.response.headers['Content-Type'];
-
-                    if (type === 'application/json') {
-                        body = JSON.parse(res.text);
-                    }
-
-                    expect(res.statusCode).to.be(exampleMock.response.status);
-                    expect(res.headers['content-type']).to.contain(type);
-                    expect(body).to.eql(exampleMock.response.body);
-
-                    done();
+                    testHeaders(err, res);
+                    testBody(err, res);
                 });
         },
         header: function (app, mock, example, done) {
             var exampleMock = mock.examples[example],
-                method = mock.method.toLowerCase(),
-                mockBody = exampleMock.request.body;
+                mockBody = exampleMock.request.body,
+                testHeaders = require('./headers.js')(exampleMock, done);
 
             request(app)
-                [method](exampleMock.request.url)
+                [mock.method.toLowerCase()](exampleMock.request.url)
                 .send(mockBody)
-                .end(function (err, res) {
-                    var type = exampleMock.response.headers['Content-Type'];
-
-                    expect(res.statusCode).to.be(exampleMock.response.status);
-                    expect(res.headers['content-type']).to.contain(type);
-
-                    done();
-                });
+                .end(testHeaders);
         }
     };
 
