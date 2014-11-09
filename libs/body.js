@@ -2,12 +2,11 @@ var expect = require('expect.js');
 
 module.exports = function (mock, done) {
     return function (err, res) {
-        var body = res.text,
-            type = exampleMock.response.headers['Content-Type'];
+        var body = res.text;
 
-        if (type === 'application/json') {
+        try {
             body = JSON.parse(res.text);
-        }
+        } catch (error) {}
 
         expect(body).to.eql(mock.response.body);
 
