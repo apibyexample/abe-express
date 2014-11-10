@@ -15,6 +15,5 @@
 
     // Styling preferences.
     "indent"        : 4,        // Indent level
-    "maxlen"        : 80,       // Set Maximum length of characters to 80
     "camelcase"     : true      // Use CAMEL Casing for variables
 }
