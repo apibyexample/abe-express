@@ -1,6 +1,6 @@
 var path = require('path'),
     expect = require('expect.js'),
-    headerLib = path.join('../libs/headers.js'),
+    headerLib = path.join('../../libs/headers.js'),
     exampleMock = {
         response: {
             status: 200,

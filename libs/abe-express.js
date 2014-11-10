@@ -3,6 +3,7 @@ var request = require('supertest'),
     expressMockCheck = {
         full: function (app, mock, example, done) {
             var exampleMock = mock.examples[example],
+                mockBody = exampleMock.request.body,
                 testHeaders = require('./headers.js')(exampleMock),
                 testBody = require('./body.js')(exampleMock, done);
 

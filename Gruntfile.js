@@ -27,7 +27,7 @@ module.exports = function (grunt) {
                     reporter: 'list'
                 },
                 src: [
-                    'test/*.js'
+                    'test/unit/**/*.js'
                 ]
             }
         }

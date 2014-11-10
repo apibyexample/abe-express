@@ -1,6 +1,6 @@
 var path = require('path'),
     expect = require('expect.js'),
-    bodyLib = path.join('../libs/body.js'),
+    bodyLib = path.join('../../libs/body.js'),
     exampleMock = {
         response: {}
     };
