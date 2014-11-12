@@ -20,6 +20,16 @@ module.exports = function (grunt) {
                 '**/*.js',
                 '!node_modules/**'
             ]
+        },
+        mochaTest: {
+            unit: {
+                options: {
+                    reporter: 'list'
+                },
+                src: [
+                    'test/unit/**/*.js'
+                ]
+            }
         }
     });
 
@@ -30,5 +40,8 @@ module.exports = function (grunt) {
         'jscs:src'
     ]);
 
-    grunt.registerTask('test', ['lint']);
+    grunt.registerTask('test', [
+        'lint',
+        'mochaTest:unit'
+    ]);
 };
