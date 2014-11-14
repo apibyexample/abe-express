@@ -30,7 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "expect.js": "~0.3.1",
-    "supertest": "~0.14.0"
+    "supertest": "~0.15.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
