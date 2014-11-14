@@ -19,39 +19,48 @@ the testing of API routes to check that the responses match those expected creat
 
 In order to use ``abe-express`` you will use this within your current testing setup
 
-```js
-var abeExpress = require('abe-express');
-abeExpress.full(app, mock, example, done);
-```
+### Header test
 
-```abeExpress```  also provides a header test for you to just test the response headers
+This is a helper which will run a test against your API ensuring that the header response matches that of your mock. In order to do this, it will match the ``status`` code of your mock, it will also test the expected ``Content-type`` matches (this is only done if your mock contains the ``Content-type`` in it's headers).
 
 ```js
-abeExpress.header(app, mock, example, done);
-```
+var abeExpress = require('abe-express'),
+    myApp = require('../app.js'),
+    mock = require('../mocks/example.json'),
+    example = 'OK';
 
-### App
+it('Should return a 200 status code', function (done) {
+    abeExpress.header(myApp, mock, example, done);
+});
+```
+### Full test
+
+This is a helper which will run all tests against your API, ensuring that the body response of your API matches that of your mock. It will also run the tests against the ``header``.
+
+```js
+var abeExpress = require('abe-express'),
+    myApp = require('../app.js'),
+    mock = require('../mocks/example.json'),
+    example = 'OK';
+
+it('Should return a 200 status code and body', function (done) {
+    abeExpress.full(myApp, mock, example, done);
+});
+```
+### Params
+
+#### App
 
 This will be your Express app in which the route has been attached to in which you want to test.
 
-### Mock
+#### Mock
 
 This will be the full ``ABE-Spec`` mock in which you are wanting to test against.
 
-### Example
+#### Example
 
 This is the ``key`` within the ``examples`` object of your mock.
 
-### Done
+#### Done
 
 This is the function which your testing system will pass within a ``it`` test, to tell your test that it has completed.
-
-Example:
-
-```js
-it('should pass', function (done) {
-    abeExpress(app, mock, example, done);
-});
-```
-
-It is expected that you pre-load your mock file previously to be able to pass it to the helper
