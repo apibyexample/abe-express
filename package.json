@@ -1,6 +1,6 @@
 {
   "name": "abe-express",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "API By Example helper for testing Express API Routes.",
   "main": "app.js",
   "scripts": {
